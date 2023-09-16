@@ -8,15 +8,16 @@ public class Pizza {
 
     private int cheesePrice;
 
-    private  int toppingPrice;
+    private  int toppingsPrice;
 
     private int paperBagPrice;
 
     private boolean isCheeseAdded;
 
+    private boolean isToppingsAdded;
     private  boolean isPaperBagAdded;
 
-    private boolean isToppingAdded;
+
     private boolean isBillGenerated;
 
 
@@ -28,12 +29,12 @@ public class Pizza {
         // your code goes here
         if(isVeg){
             this.billPrice =300;
-            this.toppingPrice=70;
+            this.toppingsPrice =70;
 
         }
         else{
             this.billPrice =400;
-            this.toppingPrice=120;
+            this.toppingsPrice =120;
         }
 
         this.cheesePrice=80;
@@ -60,9 +61,9 @@ public class Pizza {
     public void addExtraToppings(){
         // your code goes here
 
-        if(isToppingAdded==false){
-            billPrice = billPrice +toppingPrice;
-            isToppingAdded=true;
+        if(isToppingsAdded ==false){
+            billPrice = billPrice + toppingsPrice;
+            isToppingsAdded =true;
         }
     }
 
@@ -85,8 +86,8 @@ public class Pizza {
             if(isCheeseAdded){
                 bill=bill+"Extra Cheese Added: "+this.cheesePrice+"\n";
             }
-            if(isToppingAdded){
-                bill=bill+"Extra Toppings Added: "+this.toppingPrice+"\n";
+            if(isToppingsAdded){
+                bill=bill+"Extra Toppings Added: "+this.toppingsPrice +"\n";
             }
             if(isPaperBagAdded){
                 bill=bill+"Paperbag Added: "+this.paperBagPrice+"\n";
